@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Teclas de atalho
   document.addEventListener('keypress', e => {
-    if (e.keyCode === 49)
+    if (e.keyCode === 49) // Tecla '1'
       generate()
-    else if (e.keyCode === 50)
+    else if (e.keyCode === 50) // Tecla '2'
       calculate()
   })
 
@@ -13,11 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const signal = document.querySelector('#signal')
     const v1 = parseInt(Math.random() * 100) + 1
     const v2 = parseInt(Math.random() * 100) + 1
-    const sig = (parseInt(Math.random() * 2) ? '+' : '-')
+    const sig = (parseInt(Math.random() * 2) ? '+' : '-') // Se for 1, retorna '+', senão '-'
     
     signal.innerHTML = sig
     document.querySelector('#result').value = ''
-
     valor1.value = v1
     valor2.value = v2
   }
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#result').value = valor1 + valor2
       else if (signal == '-') {
         let v = valor1 - valor2
-        v = (v < 0) ? v * -1 : v
+        v = (v < 0) ? v * -1 : v // Caso 'v' seja negativo, o sinal do valor é invertido
 
         document.querySelector('#result').value = v
       }
