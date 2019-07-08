@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let sig = (parseInt(Math.random() * 2) ? '+' : '-')
     
     signal.innerHTML = sig
+    document.querySelector('#result').value = ''
 
     valor1.value = v1
     valor2.value = v2
