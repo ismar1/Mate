@@ -1,2 +1,2 @@
-#Pratique o básico
+# Pratique o básico
 Realize contas simples de soma e subtração. 
