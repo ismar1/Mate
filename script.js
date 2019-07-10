@@ -9,17 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Gera as contas e imprime em seus lugares
   const generate = () => {
-    const valor1 = document.querySelector('#valor1')
-    const valor2 = document.querySelector('#valor2')
-    const signal = document.querySelector('#signal')
     const v1 = parseInt(Math.random() * 100) + 1
     const v2 = parseInt(Math.random() * 100) + 1
     const sig = (parseInt(Math.random() * 2) ? '+' : '-') // Se for 1, retorna '+', senão '-'
     
-    signal.innerHTML = sig
+    document.querySelector('#signal').innerHTML = sig
     document.querySelector('#result').value = ''
-    valor1.value = v1
-    valor2.value = v2
+    document.querySelector('#valor1').value = v1
+    document.querySelector('#valor2').value = v2
   }
   
   // Realiza o cálcula e mostra o resultado
